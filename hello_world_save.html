@@ -323,7 +323,8 @@
         });
         editor.on('run:export-template', () => console.log('After the command run'));
         editor.on('abort:export-template', () => console.log('Command aborted'));
-
+        editor.on('storage:load', () => console.log('storage:load'));
+        editor.on('storage:store', () => console.log('storage:store'));
         // Define commands
         editor.Commands.add('show-layers', {
             getRowEl(editor) {
